@@ -1,0 +1,778 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Acolher para Ensinar</title>
+
+    <link rel="stylesheet" href="style.css">
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link
+        href="https://fonts.googleapis.com/css2?family=Nunito:wght@400;500;600;700;800&family=Poppins:wght@500;600;700&display=swap"
+        rel="stylesheet">
+</head>
+
+<body>
+
+    <div class="app">
+
+        <!-- ================= HEADER ================= -->
+
+        <header class="topo">
+
+            <div class="logo">
+
+                <div class="logo-icon">
+                    💜
+                </div>
+
+                <div>
+                    <h1>Acolher</h1>
+                    <span>para Ensinar</span>
+                </div>
+
+            </div>
+
+            <button class="notificacao">
+                ♡
+            </button>
+
+        </header>
+
+
+        <!-- ================= CONTEÚDO ================= -->
+
+        <main>
+
+            <!-- TELA INICIAL -->
+
+            <section class="tela ativa" id="inicio">
+
+                <div class="saudacao">
+
+                    <span>Olá! 👋</span>
+
+                    <h2>
+                        Como você está
+                        <strong>se sentindo hoje?</strong>
+                    </h2>
+
+                    <p>
+                        Tire um momento para perceber
+                        como você está.
+                    </p>
+
+                </div>
+
+
+                <!-- HUMOR -->
+
+                <div class="humores">
+
+                    <button
+                        class="humor"
+                        onclick="selecionarHumor(this, 'Muito bem')">
+
+                        <div>😄</div>
+
+                        <span>Muito bem</span>
+
+                    </button>
+
+
+                    <button
+                        class="humor"
+                        onclick="selecionarHumor(this, 'Bem')">
+
+                        <div>🙂</div>
+
+                        <span>Bem</span>
+
+                    </button>
+
+
+                    <button
+                        class="humor"
+                        onclick="selecionarHumor(this, 'Neutro')">
+
+                        <div>😐</div>
+
+                        <span>Neutro</span>
+
+                    </button>
+
+
+                    <button
+                        class="humor"
+                        onclick="selecionarHumor(this, 'Não muito bem')">
+
+                        <div>😔</div>
+
+                        <span>Não muito bem</span>
+
+                    </button>
+
+                </div>
+
+
+                <p id="respostaHumor" class="resposta"></p>
+
+
+                <!-- BEM-ESTAR -->
+
+                <div class="titulo-card">
+
+                    <div>
+
+                        <span>SEU BEM-ESTAR</span>
+
+                        <h3>
+                            Como você está indo?
+                        </h3>
+
+                    </div>
+
+                    <span class="porcentagem">
+                        72%
+                    </span>
+
+                </div>
+
+
+                <div class="progresso-card">
+
+                    <div class="progresso">
+
+                        <div class="progresso-barra"></div>
+
+                    </div>
+
+                    <p>
+                        Você está cuidando de si.
+                        Continue assim! 💜
+                    </p>
+
+                </div>
+
+
+                <!-- ATALHOS -->
+
+                <h3 class="titulo">
+
+                    O que você precisa agora?
+
+                </h3>
+
+
+                <div class="atalhos">
+
+                    <button onclick="mostrarTela('relaxar')">
+
+                        <div class="atalho-icon roxo">
+                            🧘
+                        </div>
+
+                        <span>
+                            Relaxar
+                        </span>
+
+                        <small>
+                            Pausa consciente
+                        </small>
+
+                    </button>
+
+
+                    <button onclick="abrirQuiz()">
+
+                        <div class="atalho-icon azul">
+                            🧠
+                        </div>
+
+                        <span>
+                            Quiz
+                        </span>
+
+                        <small>
+                            Conheça-se melhor
+                        </small>
+
+                    </button>
+
+
+                    <button onclick="mostrarTela('recursos')">
+
+                        <div class="atalho-icon rosa">
+                            📚
+                        </div>
+
+                        <span>
+                            Aprender
+                        </span>
+
+                        <small>
+                            Conteúdos
+                        </small>
+
+                    </button>
+
+
+                    <button onclick="mostrarTela('apoio')">
+
+                        <div class="atalho-icon verde">
+                            🤝
+                        </div>
+
+                        <span>
+                            Pedir ajuda
+                        </span>
+
+                        <small>
+                            Rede de apoio
+                        </small>
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= BEM-ESTAR ================= -->
+
+            <section class="tela" id="bem-estar">
+
+                <div class="pagina-header">
+
+                    <span class="mini-tag">
+                        MEU BEM-ESTAR
+                    </span>
+
+                    <h2>
+                        Conheça melhor
+                        <strong>suas emoções.</strong>
+                    </h2>
+
+                    <p>
+                        Acompanhe seus momentos e descubra
+                        maneiras de cuidar de si.
+                    </p>
+
+                </div>
+
+
+                <div class="humor-principal">
+
+                    <span>
+                        SEU HUMOR HOJE
+                    </span>
+
+                    <div class="humor-grande">
+                        😊
+                    </div>
+
+                    <h3>
+                        Sentindo-se bem
+                    </h3>
+
+                    <p>
+                        Que bom ter você por aqui! 💜
+                    </p>
+
+                </div>
+
+
+                <div class="estatisticas">
+
+                    <div>
+                        <span>7</span>
+                        <small>Dias registrados</small>
+                    </div>
+
+                    <div>
+                        <span>72%</span>
+                        <small>Bem-estar</small>
+                    </div>
+
+                    <div>
+                        <span>4</span>
+                        <small>Atividades</small>
+                    </div>
+
+                </div>
+
+
+                <div class="dica">
+
+                    <span>💡</span>
+
+                    <div>
+
+                        <strong>
+                            Uma dica para você
+                        </strong>
+
+                        <p>
+                            Reserve alguns minutos do seu
+                            dia para fazer algo que você gosta.
+                        </p>
+
+                    </div>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= RELAXAR ================= -->
+
+            <section class="tela" id="relaxar">
+
+                <div class="pagina-header">
+
+                    <span class="mini-tag">
+                        PAUSA CONSCIENTE
+                    </span>
+
+                    <h2>
+                        Vamos respirar
+                        <strong>juntos?</strong>
+                    </h2>
+
+                    <p>
+                        Reserve alguns minutos para
+                        desacelerar.
+                    </p>
+
+                </div>
+
+
+                <div class="respiracao">
+
+                    <div class="circulo-respiracao" id="circulo">
+                        Inspire
+                    </div>
+
+                    <h3 id="textoRespiracao">
+                        Prepare-se
+                    </h3>
+
+                    <p>
+                        Siga o ritmo do círculo.
+                    </p>
+
+                    <button
+                        class="botao-principal"
+                        onclick="iniciarRespiracao()">
+
+                        Começar
+
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= RECURSOS ================= -->
+
+            <section class="tela" id="recursos">
+
+                <div class="pagina-header">
+
+                    <span class="mini-tag">
+                        APRENDER
+                    </span>
+
+                    <h2>
+                        Entender também
+                        <strong>é cuidar.</strong>
+                    </h2>
+
+                    <p>
+                        Informações para ajudar você
+                        a compreender suas emoções.
+                    </p>
+
+                </div>
+
+
+                <div class="conteudos">
+
+                    <article>
+
+                        <div class="conteudo-icon roxo">
+                            🧠
+                        </div>
+
+                        <div>
+
+                            <span>
+                                EMOÇÕES
+                            </span>
+
+                            <h3>
+                                Entendendo o que sinto
+                            </h3>
+
+                            <p>
+                                Aprenda a reconhecer e
+                                compreender suas emoções.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article>
+
+                        <div class="conteudo-icon rosa">
+                            🌸
+                        </div>
+
+                        <div>
+
+                            <span>
+                                AUTOCUIDADO
+                            </span>
+
+                            <h3>
+                                Pequenos cuidados
+                            </h3>
+
+                            <p>
+                                Descubra hábitos simples
+                                que podem melhorar sua rotina.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article>
+
+                        <div class="conteudo-icon azul">
+                            🌊
+                        </div>
+
+                        <div>
+
+                            <span>
+                                ESTRESSE
+                            </span>
+
+                            <h3>
+                                Quando tudo parece demais
+                            </h3>
+
+                            <p>
+                                Conheça maneiras saudáveis
+                                de lidar com momentos difíceis.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+
+                    <article>
+
+                        <div class="conteudo-icon verde">
+                            🤝
+                        </div>
+
+                        <div>
+
+                            <span>
+                                CONVIVÊNCIA
+                            </span>
+
+                            <h3>
+                                Você não está sozinho
+                            </h3>
+
+                            <p>
+                                Aprenda sobre empatia,
+                                respeito e apoio.
+                            </p>
+
+                        </div>
+
+                    </article>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= APOIO ================= -->
+
+            <section class="tela" id="apoio">
+
+                <div class="apoio-topo">
+
+                    <div class="apoio-icon">
+                        🤝
+                    </div>
+
+                    <span class="mini-tag">
+                        REDE DE APOIO
+                    </span>
+
+                    <h2>
+                        Pedir ajuda também
+                        <strong>é cuidar de si.</strong>
+                    </h2>
+
+                    <p>
+                        Você não precisa passar por
+                        tudo sozinho.
+                    </p>
+
+                </div>
+
+
+                <div class="apoio-card">
+
+                    <h3>
+                        Com quem posso conversar?
+                    </h3>
+
+                    <button>
+                        <span>👩‍🏫</span>
+
+                        <div>
+                            <strong>
+                                Professor ou orientador
+                            </strong>
+
+                            <small>
+                                Alguém da sua escola
+                            </small>
+                        </div>
+
+                        <b>›</b>
+                    </button>
+
+
+                    <button>
+                        <span>👨‍👩‍👧</span>
+
+                        <div>
+                            <strong>
+                                Família ou responsável
+                            </strong>
+
+                            <small>
+                                Alguém em quem confia
+                            </small>
+                        </div>
+
+                        <b>›</b>
+                    </button>
+
+
+                    <button>
+                        <span>🧠</span>
+
+                        <div>
+                            <strong>
+                                Profissional
+                            </strong>
+
+                            <small>
+                                Psicólogo ou profissional de saúde
+                            </small>
+                        </div>
+
+                        <b>›</b>
+                    </button>
+
+                </div>
+
+            </section>
+
+
+            <!-- ================= PERFIL ================= -->
+
+            <section class="tela" id="perfil">
+
+                <div class="perfil">
+
+                    <div class="avatar">
+                        😊
+                    </div>
+
+                    <h2>
+                        Meu perfil
+                    </h2>
+
+                    <p>
+                        Seu espaço dentro do Acolher.
+                    </p>
+
+                </div>
+
+
+                <div class="opcoes-perfil">
+
+                    <button>
+                        <span>🔔</span>
+                        Notificações
+                        <b>›</b>
+                    </button>
+
+                    <button>
+                        <span>🎯</span>
+                        Minhas atividades
+                        <b>›</b>
+                    </button>
+
+                    <button>
+                        <span>💜</span>
+                        Sobre o aplicativo
+                        <b>›</b>
+                    </button>
+
+                </div>
+
+            </section>
+
+        </main>
+
+
+        <!-- ================= NAVEGAÇÃO ================= -->
+
+        <nav class="navegacao">
+
+            <button
+                class="nav-item ativo"
+                onclick="mostrarTela('inicio', this)">
+
+                <span>⌂</span>
+                <small>Início</small>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="mostrarTela('bem-estar', this)">
+
+                <span>♡</span>
+                <small>Bem-estar</small>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="mostrarTela('recursos', this)">
+
+                <span>▣</span>
+                <small>Recursos</small>
+
+            </button>
+
+
+            <button
+                class="nav-item"
+                onclick="mostrarTela('perfil', this)">
+
+                <span>◯</span>
+                <small>Perfil</small>
+
+            </button>
+
+        </nav>
+
+    </div>
+
+
+    <!-- ================= MODAL QUIZ ================= -->
+
+    <div class="modal" id="modalQuiz">
+
+        <div class="quiz">
+
+            <button
+                class="fechar"
+                onclick="fecharQuiz()">
+
+                ×
+
+            </button>
+
+            <span class="mini-tag">
+                QUIZ
+            </span>
+
+            <h2>
+                Vamos conhecer
+                você melhor? 🧠
+            </h2>
+
+            <div id="perguntaQuiz">
+
+                <p>
+                    Quando você está se sentindo
+                    sobrecarregado, o que costuma fazer?
+                </p>
+
+                <button onclick="proximaPergunta()">
+                    🗣️ Converso com alguém
+                </button>
+
+                <button onclick="proximaPergunta()">
+                    🎧 Faço algo que gosto
+                </button>
+
+                <button onclick="proximaPergunta()">
+                    😶 Prefiro ficar sozinho
+                </button>
+
+            </div>
+
+            <div id="resultadoQuiz">
+
+                <div class="resultado-icon">
+                    💜
+                </div>
+
+                <h3>
+                    Obrigado por refletir!
+                </h3>
+
+                <p>
+                    Conhecer seus sentimentos é
+                    um passo importante para cuidar
+                    de si.
+                </p>
+
+                <button
+                    class="botao-principal"
+                    onclick="fecharQuiz()">
+
+                    Continuar
+
+                </button>
+
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>

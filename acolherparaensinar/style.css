@@ -1,0 +1,1565 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+:root {
+
+    --roxo: #7C6CE4;
+    --roxo-claro: #EEEAFE;
+    --roxo-muito-claro: #F8F6FF;
+
+    --rosa: #F3B8D2;
+    --rosa-claro: #FFF0F6;
+
+    --azul: #9CC9F5;
+    --azul-claro: #EEF7FF;
+
+    --verde: #A9DCCF;
+    --verde-claro: #EEFAF7;
+
+    --texto: #55556B;
+    --titulo: #29283F;
+
+    --branco: #FFFFFF;
+
+    --borda: #EDEAF5;
+
+    --sombra:
+        0 10px 30px rgba(82, 69, 140, .08);
+}
+
+
+* {
+    scrollbar-width: thin;
+}
+
+
+html {
+    scroll-behavior: smooth;
+}
+
+
+body {
+
+    font-family: "Nunito", sans-serif;
+
+    background: #E9E7F3;
+
+    color: var(--texto);
+
+}
+
+
+button {
+    font-family: inherit;
+}
+
+
+/* =====================================
+   APP
+===================================== */
+
+.app {
+
+    width: 100%;
+
+    max-width: 480px;
+
+    min-height: 100vh;
+
+    margin: auto;
+
+    background: var(--roxo-muito-claro);
+
+    position: relative;
+
+    box-shadow:
+        0 0 50px rgba(50, 40, 100, .12);
+
+}
+
+
+/* =====================================
+   HEADER
+===================================== */
+
+.topo {
+
+    height: 80px;
+
+    padding: 18px 22px;
+
+    background: rgba(255,255,255,.92);
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    position: sticky;
+
+    top: 0;
+
+    z-index: 50;
+
+    backdrop-filter: blur(15px);
+
+}
+
+
+.logo {
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 10px;
+
+}
+
+
+.logo-icon {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 14px;
+
+    background: var(--roxo-claro);
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 21px;
+
+}
+
+
+.logo h1 {
+
+    font-family: "Poppins";
+
+    font-size: 16px;
+
+    line-height: 15px;
+
+    color: var(--titulo);
+
+}
+
+
+.logo span {
+
+    font-size: 11px;
+
+    color: var(--roxo);
+
+    font-weight: 700;
+
+}
+
+
+.notificacao {
+
+    width: 42px;
+
+    height: 42px;
+
+    border-radius: 50%;
+
+    border: none;
+
+    background: var(--roxo-claro);
+
+    color: var(--roxo);
+
+    font-size: 20px;
+
+    cursor: pointer;
+
+}
+
+
+/* =====================================
+   TELAS
+===================================== */
+
+.tela {
+
+    display: none;
+
+    padding: 25px 22px 110px;
+
+    animation: aparecer .3s ease;
+
+}
+
+
+.tela.ativa {
+
+    display: block;
+
+}
+
+
+@keyframes aparecer {
+
+    from {
+
+        opacity: 0;
+
+        transform: translateY(8px);
+
+    }
+
+    to {
+
+        opacity: 1;
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+/* =====================================
+   SAUDAÇÃO
+===================================== */
+
+.saudacao span {
+
+    color: var(--roxo);
+
+    font-weight: 800;
+
+}
+
+
+.saudacao h2 {
+
+    color: var(--titulo);
+
+    font-family: "Poppins";
+
+    font-size: 27px;
+
+    line-height: 1.2;
+
+    margin: 7px 0;
+
+}
+
+
+.saudacao h2 strong {
+
+    color: var(--roxo);
+
+}
+
+
+.saudacao p {
+
+    font-size: 14px;
+
+}
+
+
+/* =====================================
+   HUMORES
+===================================== */
+
+.humores {
+
+    display: grid;
+
+    grid-template-columns: repeat(4, 1fr);
+
+    gap: 8px;
+
+    margin-top: 20px;
+
+}
+
+
+.humor {
+
+    border: 1px solid var(--borda);
+
+    background: white;
+
+    border-radius: 17px;
+
+    padding: 11px 3px;
+
+    cursor: pointer;
+
+    transition: .2s;
+
+}
+
+
+.humor div {
+
+    font-size: 25px;
+
+}
+
+
+.humor span {
+
+    display: block;
+
+    margin-top: 3px;
+
+    font-size: 9px;
+
+    color: var(--texto);
+
+    font-weight: 700;
+
+}
+
+
+.humor:hover,
+.humor.selecionado {
+
+    border-color: var(--roxo);
+
+    background: var(--roxo-claro);
+
+    transform: translateY(-3px);
+
+}
+
+
+.resposta {
+
+    text-align: center;
+
+    color: var(--roxo);
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    min-height: 20px;
+
+    margin-top: 8px;
+
+}
+
+
+/* =====================================
+   BEM-ESTAR
+===================================== */
+
+.titulo-card {
+
+    display: flex;
+
+    align-items: center;
+
+    justify-content: space-between;
+
+    margin-top: 22px;
+
+}
+
+
+.titulo-card span:first-child {
+
+    font-size: 9px;
+
+    color: var(--roxo);
+
+    font-weight: 800;
+
+    letter-spacing: .5px;
+
+}
+
+
+.titulo-card h3 {
+
+    color: var(--titulo);
+
+    font-family: "Poppins";
+
+    font-size: 16px;
+
+}
+
+
+.porcentagem {
+
+    color: var(--roxo);
+
+    font-size: 22px;
+
+    font-weight: 800;
+
+}
+
+
+.progresso-card {
+
+    margin-top: 10px;
+
+    background: white;
+
+    padding: 16px;
+
+    border-radius: 18px;
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.progresso {
+
+    width: 100%;
+
+    height: 8px;
+
+    background: #E9E6F4;
+
+    border-radius: 10px;
+
+    overflow: hidden;
+
+}
+
+
+.progresso-barra {
+
+    width: 72%;
+
+    height: 100%;
+
+    background: linear-gradient(
+        90deg,
+        #A296F1,
+        #7665DE
+    );
+
+    border-radius: 10px;
+
+}
+
+
+.progresso-card p {
+
+    font-size: 11px;
+
+    margin-top: 9px;
+
+}
+
+
+/* =====================================
+   ATALHOS
+===================================== */
+
+.titulo {
+
+    color: var(--titulo);
+
+    font-family: "Poppins";
+
+    font-size: 17px;
+
+    margin: 25px 0 12px;
+
+}
+
+
+.atalhos {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 11px;
+
+}
+
+
+.atalhos button {
+
+    text-align: left;
+
+    background: white;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 19px;
+
+    padding: 15px;
+
+    cursor: pointer;
+
+    box-shadow: var(--sombra);
+
+    transition: .2s;
+
+}
+
+
+.atalhos button:hover {
+
+    transform: translateY(-3px);
+
+}
+
+
+.atalho-icon {
+
+    width: 40px;
+
+    height: 40px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    font-size: 20px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.roxo {
+
+    background: var(--roxo-claro);
+
+}
+
+
+.azul {
+
+    background: var(--azul-claro);
+
+}
+
+
+.rosa {
+
+    background: var(--rosa-claro);
+
+}
+
+
+.verde {
+
+    background: var(--verde-claro);
+
+}
+
+
+.atalhos span {
+
+    display: block;
+
+    color: var(--titulo);
+
+    font-weight: 800;
+
+    font-size: 14px;
+
+}
+
+
+.atalhos small {
+
+    color: #9998A9;
+
+    font-size: 10px;
+
+}
+
+
+/* =====================================
+   HEADERS DAS PÁGINAS
+===================================== */
+
+.pagina-header {
+
+    margin-bottom: 20px;
+
+}
+
+
+.mini-tag {
+
+    color: var(--roxo);
+
+    background: var(--roxo-claro);
+
+    padding: 5px 10px;
+
+    border-radius: 20px;
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+}
+
+
+.pagina-header h2 {
+
+    color: var(--titulo);
+
+    font-family: "Poppins";
+
+    font-size: 26px;
+
+    line-height: 1.2;
+
+    margin: 12px 0 7px;
+
+}
+
+
+.pagina-header h2 strong {
+
+    color: var(--roxo);
+
+}
+
+
+.pagina-header p {
+
+    font-size: 13px;
+
+}
+
+
+/* =====================================
+   BEM-ESTAR
+===================================== */
+
+.humor-principal {
+
+    background: linear-gradient(
+        135deg,
+        #7E70E5,
+        #A296F1
+    );
+
+    border-radius: 25px;
+
+    padding: 25px;
+
+    text-align: center;
+
+    color: white;
+
+    box-shadow:
+        0 15px 30px rgba(124,108,228,.2);
+
+}
+
+
+.humor-principal > span {
+
+    font-size: 9px;
+
+    font-weight: 800;
+
+    opacity: .8;
+
+}
+
+
+.humor-grande {
+
+    font-size: 65px;
+
+    margin: 8px 0;
+
+}
+
+
+.humor-principal h3 {
+
+    font-family: "Poppins";
+
+}
+
+
+.humor-principal p {
+
+    font-size: 12px;
+
+}
+
+
+.estatisticas {
+
+    display: grid;
+
+    grid-template-columns: repeat(3,1fr);
+
+    gap: 8px;
+
+    margin-top: 12px;
+
+}
+
+
+.estatisticas div {
+
+    background: white;
+
+    border-radius: 17px;
+
+    padding: 15px 5px;
+
+    text-align: center;
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.estatisticas span {
+
+    display: block;
+
+    color: var(--roxo);
+
+    font-size: 19px;
+
+    font-weight: 800;
+
+}
+
+
+.estatisticas small {
+
+    font-size: 9px;
+
+}
+
+
+.dica {
+
+    display: flex;
+
+    gap: 13px;
+
+    margin-top: 15px;
+
+    padding: 17px;
+
+    background: var(--rosa-claro);
+
+    border-radius: 18px;
+
+}
+
+
+.dica > span {
+
+    font-size: 24px;
+
+}
+
+
+.dica strong {
+
+    color: var(--titulo);
+
+    font-size: 13px;
+
+}
+
+
+.dica p {
+
+    font-size: 11px;
+
+    margin-top: 2px;
+
+}
+
+
+/* =====================================
+   RESPIRAÇÃO
+===================================== */
+
+.respiracao {
+
+    text-align: center;
+
+    background: white;
+
+    padding: 30px 20px;
+
+    border-radius: 25px;
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.circulo-respiracao {
+
+    width: 170px;
+
+    height: 170px;
+
+    margin: 20px auto;
+
+    border-radius: 50%;
+
+    background:
+
+        radial-gradient(
+            circle,
+            #EEEAFE 0%,
+            #DDD7FF 70%
+        );
+
+    display: grid;
+
+    place-items: center;
+
+    color: var(--roxo);
+
+    font-weight: 800;
+
+    font-size: 18px;
+
+    transition:
+        transform 4s ease-in-out;
+
+}
+
+
+.circulo-respiracao.crescer {
+
+    transform: scale(1.25);
+
+}
+
+
+.respiracao h3 {
+
+    color: var(--titulo);
+
+    font-family: "Poppins";
+
+}
+
+
+.respiracao p {
+
+    font-size: 12px;
+
+    margin-bottom: 20px;
+
+}
+
+
+.botao-principal {
+
+    border: none;
+
+    color: white;
+
+    background: var(--roxo);
+
+    padding: 13px 30px;
+
+    border-radius: 13px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    box-shadow:
+        0 10px 20px rgba(124,108,228,.25);
+
+}
+
+
+/* =====================================
+   CONTEÚDOS
+===================================== */
+
+.conteudos {
+
+    display: grid;
+
+    gap: 11px;
+
+}
+
+
+.conteudos article {
+
+    display: flex;
+
+    gap: 13px;
+
+    padding: 16px;
+
+    background: white;
+
+    border: 1px solid var(--borda);
+
+    border-radius: 19px;
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.conteudo-icon {
+
+    min-width: 43px;
+
+    height: 43px;
+
+    border-radius: 13px;
+
+    display: grid;
+
+    place-items: center;
+
+    font-size: 20px;
+
+}
+
+
+.conteudos article span {
+
+    font-size: 8px;
+
+    font-weight: 800;
+
+    color: var(--roxo);
+
+}
+
+
+.conteudos h3 {
+
+    color: var(--titulo);
+
+    font-family: "Poppins";
+
+    font-size: 14px;
+
+}
+
+
+.conteudos p {
+
+    font-size: 10px;
+
+    margin-top: 3px;
+
+}
+
+
+/* =====================================
+   APOIO
+===================================== */
+
+.apoio-topo {
+
+    text-align: center;
+
+    padding: 15px 5px 25px;
+
+}
+
+
+.apoio-icon {
+
+    width: 70px;
+
+    height: 70px;
+
+    margin: auto;
+
+    display: grid;
+
+    place-items: center;
+
+    background: var(--verde-claro);
+
+    border-radius: 22px;
+
+    font-size: 35px;
+
+    margin-bottom: 15px;
+
+}
+
+
+.apoio-topo h2 {
+
+    color: var(--titulo);
+
+    font-family: "Poppins";
+
+    font-size: 26px;
+
+    line-height: 1.2;
+
+    margin: 12px 0;
+
+}
+
+
+.apoio-topo h2 strong {
+
+    color: var(--roxo);
+
+}
+
+
+.apoio-topo p {
+
+    font-size: 13px;
+
+}
+
+
+.apoio-card {
+
+    background: white;
+
+    padding: 20px;
+
+    border-radius: 23px;
+
+    box-shadow: var(--sombra);
+
+}
+
+
+.apoio-card h3 {
+
+    color: var(--titulo);
+
+    font-family: "Poppins";
+
+    font-size: 16px;
+
+    margin-bottom: 10px;
+
+}
+
+
+.apoio-card button {
+
+    width: 100%;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 12px;
+
+    padding: 13px 3px;
+
+    border: none;
+
+    border-bottom: 1px solid var(--borda);
+
+    background: white;
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.apoio-card button:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.apoio-card button > span {
+
+    width: 42px;
+
+    height: 42px;
+
+    display: grid;
+
+    place-items: center;
+
+    border-radius: 13px;
+
+    background: var(--roxo-claro);
+
+    font-size: 20px;
+
+}
+
+
+.apoio-card button div {
+
+    flex: 1;
+
+}
+
+
+.apoio-card strong {
+
+    display: block;
+
+    color: var(--titulo);
+
+    font-size: 12px;
+
+}
+
+
+.apoio-card small {
+
+    font-size: 9px;
+
+}
+
+
+.apoio-card b {
+
+    color: var(--roxo);
+
+    font-size: 22px;
+
+}
+
+
+/* =====================================
+   PERFIL
+===================================== */
+
+.perfil {
+
+    text-align: center;
+
+    padding: 25px 0;
+
+}
+
+
+.avatar {
+
+    width: 85px;
+
+    height: 85px;
+
+    display: grid;
+
+    place-items: center;
+
+    margin: auto;
+
+    background: var(--roxo-claro);
+
+    border-radius: 50%;
+
+    font-size: 40px;
+
+}
+
+
+.perfil h2 {
+
+    color: var(--titulo);
+
+    font-family: "Poppins";
+
+    margin-top: 15px;
+
+}
+
+
+.perfil p {
+
+    font-size: 12px;
+
+}
+
+
+.opcoes-perfil {
+
+    background: white;
+
+    border-radius: 22px;
+
+    padding: 8px 18px;
+
+}
+
+
+.opcoes-perfil button {
+
+    width: 100%;
+
+    padding: 17px 0;
+
+    display: flex;
+
+    align-items: center;
+
+    gap: 13px;
+
+    background: white;
+
+    border: none;
+
+    border-bottom: 1px solid var(--borda);
+
+    color: var(--titulo);
+
+    text-align: left;
+
+    cursor: pointer;
+
+}
+
+
+.opcoes-perfil button:last-child {
+
+    border-bottom: none;
+
+}
+
+
+.opcoes-perfil span {
+
+    font-size: 20px;
+
+}
+
+
+.opcoes-perfil b {
+
+    margin-left: auto;
+
+    color: var(--roxo);
+
+}
+
+
+/* =====================================
+   NAVEGAÇÃO INFERIOR
+===================================== */
+
+.navegacao {
+
+    position: fixed;
+
+    bottom: 0;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 100%;
+
+    max-width: 480px;
+
+    height: 75px;
+
+    padding: 8px 25px;
+
+    background: rgba(255,255,255,.95);
+
+    border-top: 1px solid var(--borda);
+
+    backdrop-filter: blur(15px);
+
+    display: grid;
+
+    grid-template-columns: repeat(4,1fr);
+
+    z-index: 100;
+
+}
+
+
+.nav-item {
+
+    border: none;
+
+    background: none;
+
+    color: #A5A3B3;
+
+    cursor: pointer;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    gap: 2px;
+
+}
+
+
+.nav-item span {
+
+    font-size: 21px;
+
+}
+
+
+.nav-item small {
+
+    font-size: 9px;
+
+    font-weight: 700;
+
+}
+
+
+.nav-item.ativo {
+
+    color: var(--roxo);
+
+}
+
+
+.nav-item.ativo span {
+
+    transform: translateY(-2px);
+
+}
+
+
+/* =====================================
+   MODAL QUIZ
+===================================== */
+
+.modal {
+
+    position: fixed;
+
+    inset: 0;
+
+    background: rgba(30,25,60,.65);
+
+    display: none;
+
+    align-items: flex-end;
+
+    justify-content: center;
+
+    z-index: 200;
+
+}
+
+
+.modal.ativo {
+
+    display: flex;
+
+}
+
+
+.quiz {
+
+    width: 100%;
+
+    max-width: 480px;
+
+    background: white;
+
+    border-radius: 28px 28px 0 0;
+
+    padding: 28px 24px 35px;
+
+    position: relative;
+
+    animation: subir .3s ease;
+
+}
+
+
+@keyframes subir {
+
+    from {
+
+        transform: translateY(100%);
+
+    }
+
+    to {
+
+        transform: translateY(0);
+
+    }
+
+}
+
+
+.fechar {
+
+    position: absolute;
+
+    right: 20px;
+
+    top: 15px;
+
+    width: 35px;
+
+    height: 35px;
+
+    border: none;
+
+    border-radius: 50%;
+
+    background: #F3F1F8;
+
+    font-size: 23px;
+
+    color: #777;
+
+    cursor: pointer;
+
+}
+
+
+.quiz h2 {
+
+    font-family: "Poppins";
+
+    color: var(--titulo);
+
+    font-size: 23px;
+
+    line-height: 1.2;
+
+    margin: 12px 0 20px;
+
+}
+
+
+#perguntaQuiz p {
+
+    color: var(--titulo);
+
+    font-weight: 800;
+
+    font-size: 14px;
+
+    margin-bottom: 12px;
+
+}
+
+
+#perguntaQuiz button {
+
+    width: 100%;
+
+    padding: 14px;
+
+    margin: 5px 0;
+
+    border-radius: 13px;
+
+    border: 1px solid var(--borda);
+
+    background: var(--roxo-muito-claro);
+
+    text-align: left;
+
+    cursor: pointer;
+
+    font-weight: 600;
+
+}
+
+
+#perguntaQuiz button:hover {
+
+    border-color: var(--roxo);
+
+    background: var(--roxo-claro);
+
+}
+
+
+#resultadoQuiz {
+
+    display: none;
+
+    text-align: center;
+
+}
+
+
+#resultadoQuiz.ativo {
+
+    display: block;
+
+}
+
+
+.resultado-icon {
+
+    font-size: 55px;
+
+    margin-bottom: 10px;
+
+}
+
+
+#resultadoQuiz h3 {
+
+    color: var(--titulo);
+
+    font-family: "Poppins";
+
+}
+
+
+#resultadoQuiz p {
+
+    font-size: 12px;
+
+    margin: 8px 0 20px;
+
+}
+
+
+/* =====================================
+   DESKTOP
+===================================== */
+
+@media (min-width: 700px) {
+
+    .app {
+
+        min-height: 100vh;
+
+    }
+
+}
